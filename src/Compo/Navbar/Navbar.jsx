@@ -50,37 +50,49 @@ const Navbar = ({ cart }) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-indigo-700 py-4 transition-all duration-300">
-          <div className="container mx-auto px-4 flex flex-col space-y-4">
-            <Link
-              to="/"
-              className="text-lg hover:text-yellow-300 transition"
-              onClick={toggleMenu}
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="text-lg hover:text-yellow-300 transition"
-              onClick={toggleMenu}
-            >
-              About
-            </Link>
-            <Link
-              to="/add-product"
-              className="flex items-center text-lg hover:text-yellow-300 transition"
-              onClick={toggleMenu}
-            >
-              <ShoppingCartIcon className="h-6 w-6 mr-2" />
-              Add Product
-              {cart.length > 0 && (
-                <span className="ml-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                  {cart.length}
-                </span>
-              )}
-            </Link>
-          </div>
+        <div className="md:hidden bg-gradient-to-b from-purple-900 to-indigo-800 py-6 px-4 transition-all duration-500 ease-in-out transform">
+        <div className="container mx-auto flex flex-col space-y-6">
+          <Link
+            to="/"
+            className="text-xl font-medium hover:text-pink-400 transition-all duration-300 flex items-center group"
+            onClick={toggleMenu}
+          >
+            <span className="bg-white bg-opacity-20 rounded-full p-1 mr-3 group-hover:bg-opacity-30">
+              🏠
+            </span>
+            Home
+          </Link>
+          
+          <Link
+            to="/about"
+            className="text-xl font-medium hover:text-pink-400 transition-all duration-300 flex items-center group"
+            onClick={toggleMenu}
+          >
+            <span className="bg-white bg-opacity-20 rounded-full p-1 mr-3 group-hover:bg-opacity-30">
+              ℹ️
+            </span>
+            About
+          </Link>
+          
+          <Link
+            to="/add-product"
+            className="text-xl font-medium hover:text-pink-400 transition-all duration-300 flex items-center group relative"
+            onClick={toggleMenu}
+          >
+            <span className="bg-white bg-opacity-20 rounded-full p-1 mr-3 group-hover:bg-opacity-30">
+              🛒
+            </span>
+            Add Product
+          </Link>
         </div>
+        
+        {/* VIP Badge */}
+        <div className="mt-8 text-center">
+          <span className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide animate-bounce">
+            Premium Member
+          </span>
+        </div>
+      </div>
       )}
     </nav>
   );
