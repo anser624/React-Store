@@ -3,7 +3,7 @@ import { ShoppingCartIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/soli
 import { Link } from "react-router-dom"; // Changed from <a> to <Link>
 import logo from '../../assets/logo.png';
 
-const Navbar = ({ cart }) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
