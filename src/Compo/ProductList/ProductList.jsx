@@ -20,7 +20,7 @@ const ProductList = () => {
   }, []);
   return (
     <>
-      <h1 className="text-center text-2 sm:text-[3xl] my-15 py-10 font-bold">
+      <h1 className="text-center text-4xl sm:text-[3xl] my-15 py-10 font-bold">
         Here You Can Shop ! Some of our products are:{" "}
       </h1>
       <div className="flex px-20 justify-center flex-wrap gap-20">
