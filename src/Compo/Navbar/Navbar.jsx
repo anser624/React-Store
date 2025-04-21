@@ -23,14 +23,20 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6">
           <Link to="/" className="hover:text-yellow-300 transition">
+          <span className="bg-opacity-20 rounded-full p-1 group-hover:bg-opacity-30">
+              🏠
+            </span>
             Home
           </Link>
           <Link to="/about" className="hover:text-yellow-300 transition">
+          <span className="bg-opacity-20 rounded-full p-1 group-hover:bg-opacity-30">
+              ℹ️
+            </span>
             About
           </Link>
           <div className="relative">
             <Link to="/add-product" className="flex items-center hover:text-yellow-300 transition">
-              <span className="ml-2">AddProduct</span>
+              <span className="ml-2">DashBoard</span>
               <ShoppingCartIcon className="h-6 w-6" />
             </Link>
           </div>
